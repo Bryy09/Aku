@@ -1,91 +1,277 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Protected Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        * {
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body, html {
-            height: 100%;
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f4f4f4;
         }
 
         .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-        }
-
-        input[type="password"] {
+            max-width: 100%;
             width: 100%;
-            padding: 10px;
-            font-size: 1em;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            height: 100vh;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 0px;
+            box-shadow: none;
+            overflow: hidden;
         }
 
-        button {
-            padding: 10px 20px;
-            font-size: 1.1em;
+        .header, .footer {
+            background-color: #25D366;
             color: white;
-            background-color: #28a745;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .icons, .footer .icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #25D366;
+            color: white;
+        }
+
+        .chat-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .chat-header .info {
+            margin-left: 10px;
+        }
+
+        .chat-header .info .name {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .chat-header .info .status {
+            font-size: 12px;
+            color: #eee;
+        }
+
+        .chat-header .actions {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat {
+            padding: 10px;
+            background-color: #f0f0f0;
+            flex: 1;
+            overflow-y: scroll;
+        }
+
+        .message {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .message.received {
+            justify-content: flex-start;
+        }
+
+        .message.sent {
+            justify-content: flex-end;
+        }
+
+        .message .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ccc;
+        }
+
+        .message .content {
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 70%;
+        }
+
+        .message.received .content {
+            background-color: white;
+        }
+
+        .message.sent .content {
+            background-color: #DCF8C6;
+        }
+
+        .message .text {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .message .time {
+            font-size: 10px;
+            color: #777;
+            text-align: right;
+        }
+
+        .footer {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            background-color: #eee;
+        }
+
+        .footer input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+
+        .footer button {
+            background-color: #25D366;
+            color: white;
             border: none;
-            border-radius: 5px;
+            padding: 10px;
+            border-radius: 50%;
+            margin-left: 10px;
             cursor: pointer;
         }
 
-        button:hover {
-            background-color: #218838;
-        }
+        @media screen and (max-width: 600px) {
+            .chat-header img {
+                width: 35px;
+                height: 35px;
+            }
 
-        .error {
-            color: red;
-            margin-top: 10px;
+            .chat-header .info .name {
+                font-size: 13px;
+            }
+
+            .chat-header .info .status {
+                font-size: 11px;
+            }
         }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <h1>Password Protected</h1>
-        <input type="password" id="passwordInput" placeholder="Enter Password" required>
-        <button id="submitBtn">Submit</button>
-        <p id="errorMessage" class="error"></p>
+        <!-- Header -->
+        <div class="header">
+            <div class="time">15.32</div>
+            <div class="icons">
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <img src="i.jpg" alt="Profile Picture">
+            <div class="info">
+                <div class="name">Chayankkkk 💖🌷💍</div>
+                <div class="status">terakhir dilihat hari ini pukul 15.20</div>
+            </div>
+            <div class="actions">
+                <i class="fas fa-phone"></i>
+                <i class="fas fa-video"></i>
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </div>
+
+        <!-- Chat Content -->
+        <div class="chat">
+            <!-- Received Message -->
+            <div class="message received">
+                <div class="avatar"></div>
+                <div class="content">
+                    <div class="text">Di usahain</div>
+                    <div class="time">19.26</div>
+                </div>
+            </div>
+
+            <!-- Sent Message -->
+            <div class="message sent">
+                <div class="content">
+                    <div class="text">Wkwkwk yakiinnn diusahain</div>
+                    <div class="time">19.26</div>
+                </div>
+            </div>
+
+            <div class="message sent">
+                <div class="content">
+                    <div class="text">Iya lahh</div>
+                    <div class="time">19.27</div>
+                </div>
+            </div>
+
+            <div class="message sent">
+                <div class="content">
+                    <div class="text">Kalau udah jadi istri tuh ya prioritas</div>
+                    <div class="time">19.27</div>
+                </div>
+            </div>
+
+            <!-- Received Message -->
+            <div class="message received">
+                <div class="avatar"></div>
+                <div class="content">
+                    <div class="text">Nanti klo nggak mau nurutin aku bilang tanggungjawab kmu buat aq kyk gini harus tanggung jawab</div>
+                    <div class="time">19.27</div>
+                </div>
+            </div>
+
+            <!-- Sent Message -->
+            <div class="message sent">
+                <div class="content">
+                    <div class="text">Lohh, aku pasti tanggung jawab kok</div>
+                    <div class="time">19.28</div>
+                </div>
+            </div>
+
+            <div class="message sent">
+                <div class="content">
+                    <div class="text">Nggak mungkin aku diem aja gak mau nurutin</div>
+                    <div class="time">19.28</div>
+                </div>
+            </div>
+
+            <!-- Received Message -->
+            <div class="message received">
+                <div class="avatar"></div>
+                <div class="content">
+                    <div class="text">Aku percaya kok</div>
+                    <div class="time">19.29</div>
+                </div>
+            </div>
+
+            <!-- Sent Message -->
+            <div class="message sent">
+                <div class="content">
+                    <div class="text">Thanks ya, sayang</div>
+                    <div class="time">19.30</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <input type="text" placeholder="Ketik pesan">
+            <button><i class="fas fa-paper-plane"></i></button>
+        </div>
     </div>
-
-    <script>
-        document.getElementById('submitBtn').addEventListener('click', function() {
-            const password = document.getElementById('passwordInput').value;
-            const correctPassword = "BryyAish";
-
-            if (password === correctPassword) {
-                // Redirect ke halaman index.html jika password benar
-                window.location.href = 'home.html';
-            } else {
-                // Menampilkan pesan kesalahan jika password salah
-                document.getElementById('errorMessage').textContent = "Incorrect password, please try again.";
-            }
-        });
-    </script>
-
 </body>
 </html>
