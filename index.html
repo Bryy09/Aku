@@ -1,423 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bryy Comp - Marketplace HP & Laptop</title>
+    <title>Kampanye Kasus Kampus</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        /* Warna yang lebih menyatu */
-        .custom-card {
-            background-color: #e9ecef; /* Warna latar belakang */
+        body {
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav a {
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .content {
+            background: #fff;
+            padding: 30px;
+            margin: 20px 0;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s; /* Efek hover */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
-        .custom-card:hover {
-            transform: translateY(-5px); /* Efek hover */
+        footer {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
         }
-        .custom-card-title {
-            background-color: #343a40; /* Warna gelap untuk judul */
-            color: white;
-            padding: 10px;
-            border-radius: 10px 10px 0 0; /* Rounded corners */
-            text-align: center; /* Center align */
+        .social-icons {
+            margin-top: 20px;
+            font-size: 1.5rem;
         }
-        .custom-card-body {
-            padding: 20px;
+        .social-icons a {
+            color: #007BFF;
+            margin: 0 10px;
+            text-decoration: none;
         }
-        .btn-wa {
-            background-color: #28a745; /* Warna hijau */
-            color: white; /* Warna teks putih */
+        .social-icons a:hover {
+            color: #0056b3;
+        }
+        .icon-arrow {
+            cursor: pointer;
+            font-size: 1.8rem;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header / Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Bryy Comp</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#laptops">Laptop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#phones">HP</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<header class="text-center">
+    <h1>Kampanye Kasus Kampus</h1>
+</header>
 
-    <!-- Main Content -->
-    <div class="container my-5">
-        <!-- Smaller Banner Section -->
-        <div class="jumbotron text-center py-4">
-            <h2>Selamat Datang di Bryy Computer</h2>
-            <p class="lead">Marketplace terbaik bergaransi untuk kebutuhan HP dan Laptop Anda.</p>
-        </div>
+<nav class="bg-light py-3">
+    <div class="container text-center">
+        <a href="#tentang" class="text-decoration-none text-primary">Tentang</a>
+        <a href="#masalah" class="text-decoration-none text-primary">Masalah</a>
+        <a href="#solusi" class="text-decoration-none text-primary">Solusi</a>
+        <a href="#kontak" class="text-decoration-none text-primary">Kontak</a>
+    </div>
+</nav>
 
-        <!-- Laptop Section -->
-        <section id="laptops" class="my-5">
-            <h2 class="text-center mb-4">Pilihan Laptop Terbaik</h2>
-            <div class="row">
-                <!-- Product 1 -->
-                <div class="col-md-4">
-                    <div class="card mb-4 custom-card">
-                        <img src="lenovo11e.jpg" class="card-img-top" alt="Laptop Lenovo 11e">
-                        <div class="custom-card-title">
-                            <h5 class="card-title">LENOVO 11E</h5>
-                        </div>
-                        <div class="custom-card-body">
-                          <h5 class="card-text">
-                            SPESIFIKASI:
-                          </h5>
-                            <p class="card-text">Prosesor Intel i5-8200y</p>
-                            <p class="card-text">RAM 8 SSD 256GB</p>
-                            <p class="card-text">LAYAR 14INC</p>
-                            <h5 class="card-text">GARANSI:</h5>
-                            <p class="card-text">SOFTWARE 5 TAHUN</p>
-                            <p class="card-text">GARANSI HARDWARE 1 BULAN</p>
-                            <p class="card-text">GARANSI GANTI UNIT 1 MINGGU</p>
-                            <P class="card-text">FREE MOUSE,MOUSE PAD DAN TAS</P>
-                            <p class="card-text text-primary font-weight-bold">Rp 4.999.000</p>
-                            <a href="https://wa.me/6287863632065" class="btn btn-wa">Beli Via WA</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 2 -->
-                <div class="col-md-4">
-                    <div class="card mb-4 custom-card">
-                        <img src="x1carbon.jpg" class="card-img-top" alt="Laptop 2">
-                        <div class="custom-card-title">
-                            <h5 class="card-title">LENOVO THINKPAD X1 CARBON</h5>
-                        </div>
-                        <div class="custom-card-body">
-                          <h5 class="card-text">SPESIFIKASI:</h5>
-                            <p class="card-text">PROCECOR INTEL CORE I5-8250U</p>
-                            <p class="card-text">RAM 8 SSD 256</p>
-                            <p class="card-text">DISPLAY 14INCH</p>
-                            <h5 class="card-text">GARANSI:</h5>
-                            <p class="card-text">SOFTWARE 5 TAHUN</p>
-                            <p class="card-text">GARANSI HARDWARE 1 BULAN</p>
-                            <p class="card-text">GARANSI GANTI UNIT 1 MINGGU</p>
-                            <P class="card-text">FREE MOUSE,MOUSE PAD DAN TAS</P>
-                            <p class="card-text text-primary font-weight-bold">Rp 5.499.000</p>
-                            <a href="https://wa.me/6287863632065" class="btn btn-wa">Beli Via WA</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 custom-card">
-                        <img src="del.jpg" class="card-img-top" alt="Laptop 2">
-                        <div class="custom-card-title">
-                            <h5 class="card-title">DELL LATITUDE 3420</h5>
-                        </div>
-                        <div class="custom-card-body">
-                          <h5 class="card-text">SPESIFIKASI:</h5>
-                            <p class="card-text">PROCECOR INTEL CORE I3-115G4</p>
-                            <p class="card-text">RAM 8 SSD 256</p>
-                            <p class="card-text">DISPLAY 14INCH</p>
-                            <h5 class="card-text">GARANSI:</h5>
-                            <p class="card-text">SOFTWARE 5 TAHUN</p>
-                            <p class="card-text">GARANSI HARDWARE 1 BULAN</p>
-                            <p class="card-text">GARANSI GANTI UNIT 1 MINGGU</p>
-                            <P class="card-text">FREE MOUSE,MOUSE PAD DAN TAS</P>
-                            <p class="card-text text-primary font-weight-bold">Rp 5.499.000</p>
-                            <a href="https://wa.me/6287863632065" class="btn btn-wa">Beli Via WA</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 custom-card">
-                        <img src="60s.jpg" class="card-img-top" alt="Laptop 2">
-                        <div class="custom-card-title">
-                            <h5 class="card-title">LENOVO THINKPAD T460S</h5>
-                        </div>
-                        <div class="custom-card-body">
-                          <h5 class="card-text">SPESIFIKASI:</h5>
-                            <p class="card-text">Prosesor Intel I7-6600U</p>
-                            <p class="card-text">RAM 8 GB, SSD 256GB</p>
-                            <p class="card-text">DISPLAY 14INCH</p>
-                            <h5 class="card-text">GARANSI:</h5>
-                            <p class="card-text">SOFTWARE 5 TAHUN</p>
-                            <p class="card-text">GARANSI HARDWARE 1 BULAN</p>
-                            <p class="card-text">GARANSI GANTI UNIT 1 MINGGU</p>
-                            <P class="card-text">FREE MOUSE,MOUSE PAD DAN TAS</P>
-                            <p class="card-text text-primary font-weight-bold">Rp 5.699.000</p>
-                            <a href="https://wa.me/6287863632065" class="btn btn-wa">Beli Via WA</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 custom-card">
-                        <img src="l13.jpg" class="card-img-top" alt="Laptop 2">
-                        <div class="custom-card-title">
-                            <h5 class="card-title">LENOVO L13</h5>
-                        </div>
-                        <div class="custom-card-body">
-                          <h5 class="card-text">SPESIFIKASI:</h5>
-                            <p class="card-text">Prosesor Intel I5-10310U</p>
-                            <p class="card-text">RAM 16 GB, SSD 256GB</p>
-                            <p class="card-text">DISPLAY 14INCH</p>
-                            <h5 class="card-text">GARANSI:</h5>
-                            <p class="card-text">SOFTWARE 5 TAHUN</p>
-                            <p class="card-text">GARANSI HARDWARE 1 BULAN</p>
-                            <p class="card-text">GARANSI GANTI UNIT 1 MINGGU</p>
-                            <P class="card-text">FREE MOUSE,MOUSE PAD DAN TAS</P>
-                            <p class="card-text text-primary font-weight-bold">Rp 6.799.000</p>
-                            <a href="https://wa.me/6287863632065" class="btn btn-wa">Beli Via WA</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 custom-card">
-                        <img src="x260.jpg" class="card-img-top" alt="Laptop 2">
-                        <div class="custom-card-title">
-                            <h5 class="card-title">LENOVO THINKPAD X260</h5>
-                        </div>
-                        <div class="custom-card-body">
-                          <h5 class="card-text">SPESIFIKASI:</h5>
-                            <p class="card-text">Prosesor Intel I5-6300U</p>
-                            <p class="card-text">RAM 8 GB, SSD 256GB</p>
-                            <p class="card-text">DISPLAY 14INCH</p>
-                            <h5 class="card-text">GARANSI:</h5>
-                            <p class="card-text">SOFTWARE 5 TAHUN</p>
-                            <p class="card-text">GARANSI HARDWARE 1 BULAN</p>
-                            <p class="card-text">GARANSI GANTI UNIT 1 MINGGU</p>
-                            <P class="card-text">FREE MOUSE,MOUSE PAD DAN TAS</P>
-                            <p class="card-text text-primary font-weight-bold">Rp 4.899.000</p>
-                            <a href="https://wa.me/6287863632065" class="btn btn-wa">Beli Via WA</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 custom-card">
-                        <img src="640g2.jpg" class="card-img-top" alt="Laptop 2">
-                        <div class="custom-card-title">
-                            <h5 class="card-title">HP 640 G2</h5>
-                        </div>
-                        <div class="custom-card-body">
-                          <h5 class="card-text">SPESIFIKASI:</h5>
-                            <p class="card-text">Prosesor Intel I5-6300U</p>
-                            <p class="card-text">RAM 8 GB, SSD 256GB</p>
-                            <p class="card-text">DISPLAY 14INCH</p>
-                            <h5 class="card-text">GARANSI:</h5>
-                            <p class="card-text">SOFTWARE 5 TAHUN</p>
-                            <p class="card-text">GARANSI HARDWARE 1 BULAN</p>
-                            <p class="card-text">GARANSI GANTI UNIT 1 MINGGU</p>
-                            <P class="card-text">FREE MOUSE,MOUSE PAD DAN TAS</P>
-                            <p class="card-text text-primary font-weight-bold">Rp 4.399.000</p>
-                            <a href="https://wa.me/6287863632065" class="btn btn-wa">Beli Via WA</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 custom-card">
-                        <img src="advan.jpg" class="card-img-top" alt="Laptop 2">
-                        <div class="custom-card-title">
-                            <h5 class="card-title">ADVAN SOULMATE</h5>
-                        </div>
-                        <div class="custom-card-body">
-                          <h5 class="card-text">SPESIFIKASI:</h5>
-                            <p class="card-text">Prosesor Intel Celeron N4020</p>
-                            <p class="card-text">RAM 4 GB, SSD 128 GB</p>
-                            <p class="card-text">DISPLAY 14INCH</p>
-                            <h5 class="card-text">GARANSI:</h5>
-                            <p class="card-text">SOFTWARE 5 TAHUN</p>
-                            <p class="card-text">GARANSI HARDWARE 1 BULAN</p>
-                            <p class="card-text">GARANSI GANTI UNIT 1 MINGGU</p>
-                            <P class="card-text">FREE MOUSE,MOUSE PAD DAN TAS</P>
-                            <p class="card-text text-primary font-weight-bold">Rp 3.499.000</p>
-                            <a href="https://wa.me/6287863632065" class="btn btn-wa">Beli Via WA</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 custom-card">
-                        <img src="hype1.jpg" class="card-img-top" alt="Laptop 2">
-                        <div class="custom-card-title">
-                            <h5 class="card-title">AXIO HYPE 1</h5>
-                        </div>
-                        <div class="custom-card-body">
-                          <h5 class="card-text">SPESIFIKASI:</h5>
-                            <p class="card-text">Prosesor Intel Celerom N4020</p>
-                            <p class="card-text">RAM r GB, SSD 128GB</p>
-                            <p class="card-text">DISPLAY 14INCH</p>
-                            <h5 class="card-text">GARANSI:</h5>
-                            <p class="card-text">SOFTWARE 5 TAHUN</p>
-                            <p class="card-text">GARANSI HARDWARE 1 BULAN</p>
-                            <p class="card-text">GARANSI GANTI UNIT 1 MINGGU</p>
-                            <P class="card-text">FREE MOUSE,MOUSE PAD DAN TAS</P>
-                            <p class="card-text text-primary font-weight-bold">Rp 3.699.000</p>
-                            <a href="https://wa.me/6287863632065" class="btn btn-wa">Beli Via WA</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 custom-card">
-                        <img src="accer.jpg" class="card-img-top" alt="Laptop 2">
-                        <div class="custom-card-title">
-                            <h5 class="card-title">ACCER ES1-132</h5>
-                        </div>
-                        <div class="custom-card-body">
-                          <h5 class="card-text">SPESIFIKASI:</h5>
-                            <p class="card-text">Prosesor Intel Celeron N3350</p>
-                            <p class="card-text">RAM 4 GB, SSD 128GB</p>
-                            <p class="card-text">DISPLAY 12INCH</p>
-                            <h5 class="card-text">GARANSI:</h5>
-                            <p class="card-text">SOFTWARE 5 TAHUN</p>
-                            <p class="card-text">GARANSI HARDWARE 1 BULAN</p>
-                            <p class="card-text">GARANSI GANTI UNIT 1 MINGGU</p>
-                            <P class="card-text">FREE MOUSE,MOUSE PAD DAN TAS</P>
-                            <p class="card-text text-primary font-weight-bold">Rp 3.499.000</p>
-                            <a href="https://wa.me/6287863632065" class="btn btn-wa">Beli Via WA</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 custom-card">
-                        <img src="x390.jpg" class="card-img-top" alt="Laptop 2">
-                        <div class="custom-card-title">
-                            <h5 class="card-title">LENOVO THINKPAD X390</h5>
-                        </div>
-                        <div class="custom-card-body">
-                          <h5 class="card-text">SPESIFIKASI:</h5>
-                            <p class="card-text">Prosesor Intel I5-8365u</p>
-                            <p class="card-text">RAM 16 GB, SSD 256GB</p>
-                            <p class="card-text">DISPLAY 14INCH</p>
-                            <h5 class="card-text">GARANSI:</h5>
-                            <p class="card-text">SOFTWARE 5 TAHUN</p>
-                            <p class="card-text">GARANSI HARDWARE 1 BULAN</p>
-                            <p class="card-text">GARANSI GANTI UNIT 1 MINGGU</p>
-                            <P class="card-text">FREE MOUSE,MOUSE PAD DAN TAS</P>
-                            <p class="card-text text-primary font-weight-bold">Rp 5.499.000</p>
-                            <a href="https://wa.me/6287863632065" class="btn btn-wa">Beli Via WA</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 custom-card">
-                        <img src="go14.jpg" class="card-img-top" alt="Laptop 2">
-                        <div class="custom-card-title">
-                            <h5 class="card-title">ASUS VIVOBOOK GO 14</h5>
-                        </div>
-                        <div class="custom-card-body">
-                          <h5 class="card-text">SPESIFIKASI:</h5>
-                            <p class="card-text">Prosesor Intel I3-1215u</p>
-                            <p class="card-text">RAM 8 GB, SSD 256GB</p>
-                            <p class="card-text">DISPLAY 14INCH</p>
-                            <h5 class="card-text">GARANSI:</h5>
-                            <p class="card-text">SOFTWARE 5 TAHUN</p>
-                            <p class="card-text">GARANSI HARDWARE 1 BULAN</p>
-                            <p class="card-text">GARANSI GANTI UNIT 1 MINGGU</p>
-                            <P class="card-text">FREE MOUSE,MOUSE PAD DAN TAS</P>
-                            <p class="card-text text-primary font-weight-bold">Rp 7.699.000</p>
-                            <a href="https://wa.me/6287863632065" class="btn btn-wa">Beli Via WA</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 custom-card">
-                        <img src="300e.jpg" class="card-img-top" alt="Laptop 2">
-                        <div class="custom-card-title">
-                            <h5 class="card-title">LENOVO YOGA 300E</h5>
-                        </div>
-                        <div class="custom-card-body">
-                          <h5 class="card-text">SPESIFIKASI:</h5>
-                            <p class="card-text">Prosesor Intel Pentium N5000</p>
-                            <p class="card-text">RAM 4 GB, SSD 128GB</p>
-                            <p class="card-text">DISPLAY 13INCH</p>
-                            <h5 class="card-text">GARANSI:</h5>
-                            <p class="card-text">SOFTWARE 5 TAHUN</p>
-                            <p class="card-text">GARANSI HARDWARE 1 BULAN</p>
-                            <p class="card-text">GARANSI GANTI UNIT 1 MINGGU</p>
-                            <P class="card-text">FREE MOUSE,MOUSE PAD DAN TAS</P>
-                            <p class="card-text text-primary font-weight-bold">Rp 3.699.000</p>
-                            <a href="https://wa.me/6287863632065" class="btn btn-wa">Beli Via WA</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 custom-card">
-                        <img src="surface.jpg" class="card-img-top" alt="Laptop 2">
-                        <div class="custom-card-title">
-                            <h5 class="card-title">MICROSOFT SURFACE PRO6</h5>
-                        </div>
-                        <div class="custom-card-body">
-                          <h5 class="card-text">SPESIFIKASI:</h5>
-                            <p class="card-text">Prosesor Intel I5-8350u</p>
-                            <p class="card-text">RAM 8 GB, SSD 256GB</p>
-                            <p class="card-text">DISPLAY 14INCH</p>
-                            <h5 class="card-text">GARANSI:</h5>
-                            <p class="card-text">SOFTWARE 5 TAHUN</p>
-                            <p class="card-text">GARANSI HARDWARE 1 BULAN</p>
-                            <p class="card-text">GARANSI GANTI UNIT 1 MINGGU</p>
-                            <P class="card-text">FREE MOUSE,MOUSE PAD DAN TAS</P>
-                            <p class="card-text text-primary font-weight-bold">Rp 6.499.000</p>
-                            <a href="https://wa.me/6287863632065" class="btn btn-wa">Beli Via WA</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 custom-card">
-                        <img src="E1404F.jpg" class="card-img-top" alt="Laptop 2">
-                        <div class="custom-card-title">
-                            <h5 class="card-title">ASUS VIVOBOOK E1404F</h5>
-                        </div>
-                        <div class="custom-card-body">
-                          <h5 class="card-text">SPESIFIKASI:</h5>
-                            <p class="card-text">Prosesor Ryzen 3-7000</p>
-                            <p class="card-text">RAM 8 GB, SSD 512GB</p>
-                            <p class="card-text">DISPLAY 14INCH</p>
-                            <h5 class="card-text">GARANSI:</h5>
-                            <p class="card-text">SOFTWARE 5 TAHUN</p>
-                            <p class="card-text">GARANSI HARDWARE 1 BULAN</p>
-                            <p class="card-text">GARANSI GANTI UNIT 1 MINGGU</p>
-                            <P class="card-text">FREE MOUSE,MOUSE PAD DAN TAS</P>
-                            <p class="card-text text-primary font-weight-bold">Rp 7.699.000</p>
-                            <a href="https://wa.me/6287863632065" class="btn btn-wa">Beli Via WA</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 3 -->
-                <div class="col-md-4">
-                    <div class="card mb-4 custom-card">
-                        <img src="ip1.jpg" class="card-img-top" alt="Laptop 3">
-                        <div class="custom-card-title">
-                            <h5 class="card-title">LENOVO IDEAPAD 1</h5>
-                        </div>
-                        <div class="custom-card-body">
-                          <h5 class="card-text">SPESIFIKASI:</h5>
-                            <p class="card-text">Prosesor Intel CELERON N4020</p>
-                            <p class="card-text">RAM 8 GB, SSD 512GB</p>
-                            <p class="card-text">DISPLAY 14INCH</p>
-                            <h5 class="card-text">GARANSI:</h5>
-                            <p class="card-text">SOFTWARE 5 TAHUN</p>
-                            <p class="card-text">GARANSI HARDWARE 1 BULAN</p>
-                            <p class="card-text">GARANSI GANTI UNIT 1 MINGGU</p>
-                            <P class="card-text">FREE MOUSE,MOUSE PAD DAN TAS</P>
-                            <p class="card-text text-primary font-weight-bold">Rp 5.699.000</p>
-                            <a href="#" class="btn btn-wa">Beli Via WA</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<div class="container">
+    <div class="content" id="tentang">
+        <h2 class="text-primary">Tentang Kampanye</h2>
+        <p>Isi tentang kampanye kamu di sini. Jelaskan tujuan kampanye dan latar belakangnya.</p>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 Bryy computer | Semua Hak Dilindungi</p>
-    </footer>
+    <div class="content" id="masalah">
+        <h2 class="text-danger">Masalah yang Dihadapi</h2>
+        <p>Jelaskan masalah yang ingin kamu kampanyekan di sini secara rinci agar pembaca memahami pentingnya isu ini.</p>
+    </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="content" id="solusi">
+        <h2 class="text-success">Solusi yang Diajukan</h2>
+        <p>Berikan solusi yang kamu tawarkan untuk menyelesaikan masalah ini. Tampilkan langkah konkret yang dapat diambil.</p>
+    </div>
+
+    <div class="content" id="kontak">
+        <h2 class="text-info">Kontak</h2>
+        <p>Berikan informasi kontak, seperti email atau nomor telepon. Atau tambahkan formulir sederhana untuk mempermudah komunikasi.</p>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="name" placeholder="Masukkan nama Anda">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Pesan</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Tulis pesan Anda di sini"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim</button>
+        </form>
+        <p class="mt-4">Hubungi kami melalui media sosial:</p>
+        <div class="social-icons">
+            <!-- WhatsApp Icon -->
+            <a href="https://wa.me/1234567890" target="_blank" title="Hubungi di WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <!-- Instagram Icon -->
+            <a href="https://instagram.com/username" target="_blank" title="Kunjungi Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <!-- Email Icon -->
+            <a href="mailto:email@domain.com" target="_blank" title="Kirim email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 Kampanye Kasus Kampus. Semua hak dilindungi.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-    </html>
+</html>
