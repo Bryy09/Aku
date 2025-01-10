@@ -10,121 +10,167 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #f0f2f5;
+            font-family: 'Arial', sans-serif;
         }
         header {
-            background-color: #007BFF;
+            background-image: url('1.jpeg'); /* Ganti dengan file gambar Anda */
+            background-size: cover;
+            background-position: center;
             color: #fff;
-            padding: 20px 0;
+            padding: 60px 0; /* Ukuran padding dikurangi */
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 90%; /* Membatasi lebar header */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
         header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        nav a {
-            margin: 0 10px;
+            font-size: 2.5rem; /* Ukuran font lebih kecil */
             font-weight: bold;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+        header p {
+            font-size: 1rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+        nav {
+            background-color: #003399;
+        }
+        nav .nav-link {
+            color: #fff !important;
+            font-weight: bold;
+        }
+        nav .nav-link:hover {
+            text-decoration: underline;
         }
         .content {
             background: #fff;
             padding: 30px;
             margin: 20px 0;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
         footer {
-            background-color: #007BFF;
+            background-color: #003399;
             color: #fff;
-            padding: 15px 0;
             text-align: center;
-        }
-        .social-icons {
-            margin-top: 20px;
-            font-size: 1.5rem;
+            padding: 20px;
         }
         .social-icons a {
-            color: #007BFF;
+            font-size: 1.8rem;
             margin: 0 10px;
+            color: #007bff;
             text-decoration: none;
         }
         .social-icons a:hover {
             color: #0056b3;
         }
-        .icon-arrow {
-            cursor: pointer;
-            font-size: 1.8rem;
-        }
     </style>
 </head>
 <body>
 
-<header class="text-center">
-    <h1>SAYANGGGGGG</h1>
+<header>
+    <h1>Kampanye Kasus Kampus</h1>
+    <p>Mewujudkan Kampus yang Lebih Baik dan Inklusif</p>
 </header>
 
-<nav class="bg-light py-3">
-    <div class="container text-center">
-        <a href="#tentang" class="text-decoration-none text-primary">Tentang</a>
-        <a href="#masalah" class="text-decoration-none text-primary">Masalah</a>
-        <a href="#solusi" class="text-decoration-none text-primary">Solusi</a>
-        <a href="#kontak" class="text-decoration-none text-primary">Kontak</a>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Kampus</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#tentang">Tentang</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#masalah">Masalah</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#solusi">Solusi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#galeri">Galeri</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">Kontak</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 
-<div class="container">
+<div class="container mt-4">
     <div class="content" id="tentang">
-        <h2 class="text-primary">OJO LALI MANGAN,KALAU LILY ITU KAMU HHA😂</h2>
-        <p>isi sesuai mau mu</p>
+        <h2 class="text-primary">Tentang Kampanye</h2>
+        <p>isi sendiri ya</p>
     </div>
-
+    
     <div class="content" id="masalah">
-        <h2 class="text-danger">GAK ROH GAWE OPO IKI</h2>
-        <p>isi sesuai mau mu</p>
+        <h2 class="text-danger">isi sendiri ya</h2>
+        <ul>
+            <li>isi sendiri ya</li>
+            <li>isi sendiri ya</li>
+            <li>isi sendiri yan</li>
+        </ul>
     </div>
-
+    
     <div class="content" id="solusi">
-        <h2 class="text-success">Solusi yang Diajukan</h2>
-        <p>isi sesuai mau mu</p>
+        <h2 class="text-success">Solusi</h2>
+        <p>isi sendiri ya</p>
     </div>
-
+    
+    <div class="content" id="galeri">
+        <h2 class="text-info">Galeri Kampus</h2>
+        <div class="row gallery">
+            <div class="col-md-4">
+                <img src="2.jpeg" alt="Kampus 1"> <!-- Ganti dengan file gambar Anda -->
+            </div>
+            <div class="col-md-4">
+                <img src="3.jpeg" alt="Kampus 2"> <!-- Ganti dengan file gambar Anda -->
+            </div>
+            <div class="col-md-4">
+                <img src="4.jpeg" alt="Kampus 3"> <!-- Ganti dengan file gambar Anda -->
+            </div>
+        </div>
+    </div>
+    
     <div class="content" id="kontak">
-        <h2 class="text-info">Kontak</h2>
-        <p>isi sesuai mau mu</p>
+        <h2 class="text-warning">Kontak</h2>
         <form>
             <div class="mb-3">
                 <label for="name" class="form-label">Nama</label>
-                <input type="text" class="form-control" id="name" placeholder="ini gimick">
+                <input type="text" class="form-control" id="name" placeholder="Masukkan nama Anda">
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="ini gimick">
+                <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda">
             </div>
             <div class="mb-3">
                 <label for="message" class="form-label">Pesan</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="ini gimick"></textarea>
+                <textarea class="form-control" id="message" rows="4" placeholder="Tulis pesan Anda"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Kirim</button>
         </form>
-        <p class="mt-4">Hubungi kami melalui media sosial:</p>
-        <div class="social-icons">
-            <!-- WhatsApp Icon -->
-            <a href="https://wa.me/1234567890" target="_blank" title="Hubungi di WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-            <!-- Instagram Icon -->
-            <a href="https://instagram.com/username" target="_blank" title="Kunjungi Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <!-- Email Icon -->
-            <a href="mailto:email@domain.com" target="_blank" title="Kirim email">
-                <i class="fas fa-envelope"></i>
-            </a>
+        <div class="social-icons mt-3">
+            <a href="https://wa.me/1234567890" target="_blank" title="Hubungi via WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/username" target="_blank" title="Kunjungi Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:email@domain.com" target="_blank" title="Kirim email"><i class="fas fa-envelope"></i></a>
         </div>
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2023 Kampanye Kasus Kampus. Semua hak dilindungi.</p>
+    <p>&copy; 2025 Kampanye Kasus Kampus. Semua Hak Dilindungi.</p>
 </footer>
 
 <!-- Bootstrap JS -->
